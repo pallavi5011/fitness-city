@@ -1,0 +1,44 @@
+{
+  "enquiry": [
+    {
+      "id": "f8ae",
+      "firstName": "pal",
+      "lastName": "kum",
+      "email": "pal@gmail.com",
+      "mobile": "8764274624",
+      "weight": "65",
+      "height": "89",
+      "bmi": 0.11286453730589573,
+      "bmiResult": "Underweight",
+      "requireTrainer": "Yes",
+      "gender": "Female",
+      "package": "Yearly",
+      "important": [
+        "Building Lean Muscle",
+        "Healthier Digestive System"
+      ],
+      "haveGymBefore": "No",
+      "enquiryDate": "2024-03-13T18:30:00.000Z"
+    },
+    {
+      "id": "b98e",
+      "firstName": "uhrf",
+      "lastName": "thfh",
+      "email": "jy@gmail.com",
+      "mobile": "6765564",
+      "weight": "86",
+      "height": "67",
+      "bmi": 0.0013366005791935842,
+      "bmiResult": "Underweight",
+      "requireTrainer": "Yes",
+      "gender": "Female",
+      "package": "Quarterly",
+      "important": [
+        "Energy and Endurance",
+        "Building Lean Muscle"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2024-03-14T18:30:00.000Z"
+    }
+  ]
+}

@@ -9,6 +9,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { ApiService } from '../services/api.service';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-create-registration',
@@ -40,7 +42,7 @@ export class CreateRegistrationComponent implements OnInit{
 
   public registerForm!: FormGroup;
 
-  constructor (private fb:FormBuilder){
+  constructor (private fb:FormBuilder,private api: ApiService, private toastService: NgToastService){
 
   }
 
@@ -61,11 +63,19 @@ export class CreateRegistrationComponent implements OnInit{
       haveGymBefore: [''],
       enquiryDate: [''],
     })
+
+    this.registerForm.controls['height'].valueChanges.subscribe(res =>{
+      this.calcBmi(res);
+    })
   }
 
 
   submit(){
     console.log("all details", this.registerForm.value)
+    this.api.postRegistration(this.registerForm.value).subscribe(res => {
+     this.toastService.success({detail:"Success", summary:"Enquiry Added", duration: 3000});
+     this.registerForm.reset();
+    })
   }
 
   calcBmi(heightValue:number){
