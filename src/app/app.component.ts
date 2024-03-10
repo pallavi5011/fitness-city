@@ -10,7 +10,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule} from '@angular/common/http';
 import { NgToastService } from 'ng-angular-popup';
-import { ToastrModule } from 'ngx-toastr';
+import { RouterModule } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -27,7 +30,10 @@ import { ToastrModule } from 'ngx-toastr';
     MatInputModule,
     MatRadioModule,
     HttpClientModule,
-    ToastrModule
+    RouterModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
     HttpClientModule,

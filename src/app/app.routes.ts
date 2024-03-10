@@ -6,5 +6,5 @@ import { RegistrationListComponent } from './registration-list/registration-list
 export const routes: Routes = [
     { path: '', redirectTo: 'register', pathMatch: 'full'},
     {path: 'register', component: CreateRegistrationComponent },
-    {path:'List', component: RegistrationListComponent},
+    {path:'list', component: RegistrationListComponent},
 ];
